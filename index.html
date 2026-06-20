@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">
+    `n
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Mobile Auto Detailing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="promo.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-controls">
+                    <button class="icon-btn" id="navThemeBtn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                    <button class="icon-btn" id="navRtlBtn" title="Toggle RTL"><i class="fas fa-align-right"></i></button>
+                    <a href="auth.html" class="icon-btn" title="Login" style="text-decoration:none;display:flex;align-items:center;justify-content:center;"><i class="fas fa-user"></i></a>
+                </div>
+            </nav>
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User
+                                Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Premium Care For Your Vehicle</span>
+                </div>
+                <h1 class="hero-title">Excellence in <br><span class="accent">Every Detail.</span></h1>
+                <p class="hero-description">Professional auto detailing and ceramic coating services that bring back the
+                    shine and protect what matters to you.</p>
+                <div class="hero-buttons">
+                    <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+                    <a href="services.html" class="btn btn-outline">Explore Services <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-faces">
+                        <div class="tf">R</div>
+                        <div class="tf">P</div>
+                        <div class="tf">A</div>
+                        <div class="tf">S</div>
+                    </div>
+                    <span>Trusted by <strong>500+</strong> car owners</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=700"
+                    alt="Premium Car">
+                <div class="hero-image-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <div><strong>Ceramic Protected</strong><small>5 Year Warranty</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Features Bar -->
+    <section class="features-bar">
+        <div class="container features-content">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                <div class="feature-text">
+                    <span class="feature-title">Expert Technicians</span>
+                    <span class="feature-subtitle">Skilled & Certified</span>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="feature-text">
+                    <span class="feature-title">Premium Products</span>
+                    <span class="feature-subtitle">International Quality</span>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                <div class="feature-text">
+                    <span class="feature-title">Doorstep Service</span>
+                    <span class="feature-subtitle">We come to you</span>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="feature-text">
+                    <span class="feature-title">Satisfaction Guaranteed</span>
+                    <span class="feature-subtitle">100% Quality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Popular Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Popular Services</h2>
+                <a href="services.html" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="services-grid">
+                <a href="services.html#ceramic" class="service-card">
+                    <div class="service-image"><img src="images/ceramic coating-after.jpg.jpeg" alt="Ceramic Coating">
+                    </div>
+                    <h3 class="service-name">Ceramic Coating</h3>
+                    <p class="service-desc">Long lasting protection</p>
+                </a>
+                <a href="services.html#interior" class="service-card">
+                    <div class="service-image"><img src="images/interior detailing-after.jpg.jpeg"
+                            alt="Interior Detailing"></div>
+                    <h3 class="service-name">Interior Detailing</h3>
+                    <p class="service-desc">Deep clean & fresh</p>
+                </a>
+                <a href="services.html#paint" class="service-card">
+                    <div class="service-image"><img src="images/paint correction-after.jpg.jpeg" alt="Paint Correction">
+                    </div>
+                    <h3 class="service-name">Paint Correction</h3>
+                    <p class="service-desc">Remove scratches</p>
+                </a>
+                <a href="services.html#wash" class="service-card">
+                    <div class="service-image"><img src="images/foam wash.jpg.jpeg" alt="Foam Wash"></div>
+                    <h3 class="service-name">Foam Wash</h3>
+                    <p class="service-desc">Spotless finish</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            <div class="hiw-grid">
+                <div class="hiw-step">
+                    <div class="hiw-number">1</div>
+                    <div class="hiw-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Book Online</h3>
+                    <p>Choose your service, pick a date and time that works for you</p>
+                </div>
+                <div class="hiw-connector"><i class="fas fa-chevron-right"></i></div>
+                <div class="hiw-step">
+                    <div class="hiw-number">2</div>
+                    <div class="hiw-icon"><i class="fas fa-truck"></i></div>
+                    <h3>We Come to You</h3>
+                    <p>Our team arrives at your location fully equipped and ready</p>
+                </div>
+                <div class="hiw-connector"><i class="fas fa-chevron-right"></i></div>
+                <div class="hiw-step">
+                    <div class="hiw-number">3</div>
+                    <div class="hiw-icon"><i class="fas fa-car"></i></div>
+                    <h3>We Detail</h3>
+                    <p>Professional detailing with premium products and expert care</p>
+                </div>
+                <div class="hiw-connector"><i class="fas fa-chevron-right"></i></div>
+                <div class="hiw-step">
+                    <div class="hiw-number">4</div>
+                    <div class="hiw-icon"><i class="fas fa-star"></i></div>
+                    <h3>Enjoy the Shine</h3>
+                    <p>Your car looks brand new — without leaving your home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Preview -->
+    <section class="ba-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See the Difference</h2>
+                <a href="gallery.html" class="view-all">View Gallery <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="ba-preview-grid">
+                <div class="ba-card">
+                    <div class="ba-card-images">
+                        <div class="ba-half"><img src="images/ceramic coating-before.jpg.jpeg"
+                                alt="Before"><span>Before</span></div>
+                        <div class="ba-half"><img src="images/ceramic coating-after.jpg.jpeg"
+                                alt="After"><span>After</span></div>
+                    </div>
+                    <p class="ba-card-label">Ceramic Coating</p>
+                </div>
+                <div class="ba-card">
+                    <div class="ba-card-images">
+                        <div class="ba-half"><img src="images/interior detailing-before.jpg.jpeg"
+                                alt="Before"><span>Before</span></div>
+                        <div class="ba-half"><img src="images/interior detailing-after.jpg.jpeg"
+                                alt="After"><span>After</span></div>
+                    </div>
+                    <p class="ba-card-label">Interior Detailing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-award"></i></div>
+                    <h3>5+ Years Experience</h3>
+                    <p>Trusted by hundreds of car owners with years of professional detailing expertise.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-spray-can"></i></div>
+                    <h3>Premium Products Only</h3>
+                    <p>We use only international-grade ceramic coatings and detailing products for lasting results.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-home"></i></div>
+                    <h3>Doorstep Convenience</h3>
+                    <p>No need to drive anywhere. Our team comes to your location fully equipped.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges. Get upfront quotes and pay only for what you need.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Quick Turnaround</h3>
+                    <p>Most services completed within hours so you can get back on the road fast.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-redo"></i></div>
+                    <h3>Satisfaction Guarantee</h3>
+                    <p>Not happy with the result? We'll redo it at no extra cost. Your satisfaction is our priority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Absolutely amazing work! My car looks brand new after the ceramic coating.
+                        The team was professional and the doorstep service was so convenient."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info"><span class="author-name">Rahul Sharma</span><span
+                                class="author-service">Ceramic Coating</span></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Best interior detailing I've ever had. They cleaned every corner of my car.
+                        It smells fresh and looks spotless. Highly recommend Nyvex!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">P</div>
+                        <div class="author-info"><span class="author-name">Priya Menon</span><span
+                                class="author-service">Interior Detailing</span></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"The paint correction removed all the swirl marks from my black car. It's
+                        like a mirror finish now. Great value for money and very skilled technicians."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info"><span class="author-name">Arjun Patel</span><span
+                                class="author-service">Paint Correction</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="faq-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <a href="faq.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="faq-preview-list">
+                <div class="faq-preview-item">
+                    <button class="fpq-question"><span>What is ceramic coating and how long does it last?</span><i
+                            class="fas fa-plus"></i></button>
+                    <div class="fpq-answer">
+                        <p>Ceramic coating is a liquid polymer that bonds with your paint, creating a protective
+                            hydrophobic layer. Depending on the grade, it lasts 1-5 years with proper maintenance.</p>
+                    </div>
+                </div>
+                <div class="faq-preview-item">
+                    <button class="fpq-question"><span>Do you come to my location?</span><i
+                            class="fas fa-plus"></i></button>
+                    <div class="fpq-answer">
+                        <p>Yes! We're a fully mobile service. We come to your home, office, or any convenient location
+                            with all equipment needed.</p>
+                    </div>
+                </div>
+                <div class="faq-preview-item">
+                    <button class="fpq-question"><span>How long does each service take?</span><i
+                            class="fas fa-plus"></i></button>
+                    <div class="fpq-answer">
+                        <p>Foam Wash: 1-2 hours, Interior Detailing: 2-3 hours, Paint Correction: 4-6 hours, Ceramic
+                            Coating: 6-8 hours including curing time.</p>
+                    </div>
+                </div>
+                <div class="faq-preview-item">
+                    <button class="fpq-question"><span>What payment methods do you accept?</span><i
+                            class="fas fa-plus"></i></button>
+                    <div class="fpq-answer">
+                        <p>We accept UPI (GPay, PhonePe, Paytm), credit/debit cards, net banking, and cash. Payment is
+                            collected after service completion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="blog-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From Our Blog</h2>
+                <a href="blog.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="blog-preview-grid">
+                <a href="blog-detail.html" class="bp-card">
+                    <div class="bp-image"><img src="images/ceramic_coating_blog.png" alt="Blog"><span
+                            class="bp-tag">Ceramic Coating</span></div>
+                    <div class="bp-content">
+                        <h3>The Complete Guide to Ceramic Coating</h3>
+                        <p>Everything you need to know about ceramic coating — how it works and whether it's worth it.
+                        </p><span class="bp-meta"><i class="fas fa-clock"></i> 8 min read</span>
+                    </div>
+                </a>
+                <a href="blog-interior.html" class="bp-card">
+                    <div class="bp-image"><img src="images/interior_detailing_blog.png" alt="Blog"><span
+                            class="bp-tag">Interior</span></div>
+                    <div class="bp-content">
+                        <h3>5 Signs Your Interior Needs Detailing</h3>
+                        <p>Don't wait until it's too late. Here are the telltale signs your car needs expert attention.
+                        </p><span class="bp-meta"><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                </a>
+                <a href="blog-wash.html" class="bp-card">
+                    <div class="bp-image"><img src="images/car_wash_blog.png" alt="Blog"><span class="bp-tag">Car
+                            Care</span></div>
+                    <div class="bp-content">
+                        <h3>How Often Should You Wash Your Car?</h3>
+                        <p>Too much or too little can damage your paint. Find the sweet spot for your situation.</p>
+                        <span class="bp-meta"><i class="fas fa-clock"></i> 4 min read</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-banner-box">
+                <div class="cta-banner-text">
+                    <h2>Ready to Transform Your Car?</h2>
+                    <p>Book your first service today and get a spotless finish delivered to your doorstep.</p>
+                </div>
+                <div class="cta-banner-btns">
+                    <a href="booking.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    <a href="https://wa.me/919876543210" class="btn btn-outline"><i class="fab fa-whatsapp"></i>
+                        WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-name">Nyvex</span>
+
+                        </div>
+                    </div>
+                    <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium
+                        car care to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="promo.html">Home2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#wash">Foam Wash</a></li>
+                        <li><a href="services.html#engine">Engine Cleaning</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Main Street, City, State</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nyvex.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Sat: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

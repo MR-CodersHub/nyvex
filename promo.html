@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Limited Time Offer | Premium Auto Detailing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="promo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+                        <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="promo.html" class="nav-link active">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="promo-hero">
+        <div class="container">
+            <div class="promo-hero-content">
+                <span class="promo-badge"><i class="fas fa-bolt"></i> Exclusive Offer</span>
+                <h1>Get <span class="accent">30% OFF</span> Your First Detailing Service</h1>
+                <p>Premium ceramic coating, paint correction, and interior detailing — delivered to your doorstep at unbeatable prices. Limited slots available this month.</p>
+                <div class="promo-hero-cta">
+                    <a href="#claim" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now & Save 30%</a>
+                    <div class="promo-trust">
+                        <div class="trust-avatars">
+                            <div class="ta">R</div>
+                            <div class="ta">P</div>
+                            <div class="ta">A</div>
+                            <div class="ta">S</div>
+                        </div>
+                        <span>500+ happy customers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-hero-image">
+                <img src="images/promo_hero.png" alt="Premium Detailing">
+                <div class="promo-float-card">
+                    <span class="pfc-discount">-30%</span>
+                    <span class="pfc-text">This Month Only</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="promo-services">
+        <div class="container">
+            <h2 class="promo-section-title">What's Included in the Offer</h2>
+            <div class="promo-services-grid">
+                <div class="promo-service-card">
+                    <div class="psc-image-wrapper">
+                        <img src="images/ceramic_coating_blog.png" alt="Ceramic Coating" class="psc-image">
+                    </div>
+                    <div class="psc-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Ceramic Coating</h3>
+                    <p>9H hardness protection with mirror-like gloss. Lasts 1-5 years.</p>
+                    <div class="psc-price"><span class="old-price">₹4,999</span><span class="new-price">₹3,499</span></div>
+                    <a href="booking.html" class="btn btn-primary psc-cta">Book Now</a>
+                </div>
+                <div class="promo-service-card">
+                    <div class="psc-image-wrapper">
+                        <img src="images/paint_correction_blog.png" alt="Paint Correction" class="psc-image">
+                    </div>
+                    <div class="psc-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Paint Correction</h3>
+                    <p>Remove swirl marks and scratches. Restore showroom finish.</p>
+                    <div class="psc-price"><span class="old-price">₹2,999</span><span class="new-price">₹2,099</span></div>
+                    <a href="booking.html" class="btn btn-primary psc-cta">Book Now</a>
+                </div>
+                <div class="promo-service-card">
+                    <div class="psc-image-wrapper">
+                        <img src="images/interior_detailing_blog.png" alt="Interior Detailing" class="psc-image">
+                    </div>
+                    <div class="psc-icon"><i class="fas fa-couch"></i></div>
+                    <h3>Interior Detailing</h3>
+                    <p>Deep clean every surface. Odor removal & leather conditioning.</p>
+                    <div class="psc-price"><span class="old-price">₹1,499</span><span class="new-price">₹1,049</span></div>
+                    <a href="booking.html" class="btn btn-primary psc-cta">Book Now</a>
+                </div>
+                <div class="promo-service-card">
+                    <div class="psc-image-wrapper">
+                        <img src="images/car_wash_blog.png" alt="Foam Wash" class="psc-image">
+                    </div>
+                    <div class="psc-icon"><i class="fas fa-shower"></i></div>
+                    <h3>Foam Wash</h3>
+                    <p>Premium snow foam + hand wash. Coating-safe & scratch-free.</p>
+                    <div class="psc-price"><span class="old-price">₹999</span><span class="new-price">₹699</span></div>
+                    <a href="booking.html" class="btn btn-primary psc-cta">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Nyvex -->
+    <section class="promo-why">
+        <div class="container">
+            <h2 class="promo-section-title">Why 500+ Car Owners Choose Nyvex</h2>
+            <div class="promo-why-grid">
+                <div class="pw-item"><i class="fas fa-home"></i><h4>Doorstep Service</h4><p>We come to you — home, office, anywhere</p></div>
+                <div class="pw-item"><i class="fas fa-award"></i><h4>Certified Experts</h4><p>5+ years experience, trained professionals</p></div>
+                <div class="pw-item"><i class="fas fa-spray-can"></i><h4>Premium Products</h4><p>International-grade coatings & chemicals</p></div>
+                <div class="pw-item"><i class="fas fa-redo"></i><h4>100% Guarantee</h4><p>Not satisfied? We redo it free of charge</p></div>
+                <div class="pw-item"><i class="fas fa-tag"></i><h4>No Hidden Fees</h4><p>Transparent pricing, pay what you see</p></div>
+                <div class="pw-item"><i class="fas fa-clock"></i><h4>Quick Turnaround</h4><p>Most services done in hours, not days</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="promo-reviews">
+        <div class="container">
+            <h2 class="promo-section-title">What Our Customers Say</h2>
+            <div class="promo-reviews-grid">
+                <div class="pr-card">
+                    <div class="pr-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"My car looks brand new after the ceramic coating. The team was professional and the doorstep service was so convenient. Best investment for my BMW."</p>
+                    <div class="pr-author"><div class="pr-av">R</div><div><strong>Rahul S.</strong><span>Ceramic Coating</span></div></div>
+                </div>
+                <div class="pr-card">
+                    <div class="pr-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Best interior detailing I've ever had. They cleaned every corner. It smells fresh and looks spotless. Highly recommend Nyvex to everyone!"</p>
+                    <div class="pr-author"><div class="pr-av">P</div><div><strong>Priya M.</strong><span>Interior Detailing</span></div></div>
+                </div>
+                <div class="pr-card">
+                    <div class="pr-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p>"The paint correction removed all swirl marks from my black car. Mirror finish now. Great value for money and very skilled technicians."</p>
+                    <div class="pr-author"><div class="pr-av">A</div><div><strong>Arjun P.</strong><span>Paint Correction</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After -->
+    <section class="promo-results">
+        <div class="container">
+            <h2 class="promo-section-title">Real Results, Real Cars</h2>
+            <div class="promo-results-grid">
+                <div class="pr-result">
+                    <img src="images/ceramic coating-before.jpg.jpeg" alt="Before">
+                    <span class="pr-label">Before</span>
+                </div>
+                <div class="pr-result">
+                    <img src="images/ceramic coating-after.jpg.jpeg" alt="After">
+                    <span class="pr-label after">After</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Claim Section -->
+    <section class="promo-claim" id="claim">
+        <div class="container">
+            <div class="claim-box">
+                <div class="claim-left">
+                    <h2>Claim Your <span class="accent">30% Discount</span> Now</h2>
+                    <p>Fill in your details and we'll call you within 30 minutes to confirm your booking at the discounted rate.</p>
+                    <ul class="claim-perks">
+                        <li><i class="fas fa-check-circle"></i> 30% off any service</li>
+                        <li><i class="fas fa-check-circle"></i> Free doorstep pickup</li>
+                        <li><i class="fas fa-check-circle"></i> Satisfaction guaranteed</li>
+                        <li><i class="fas fa-check-circle"></i> Limited slots — first come, first served</li>
+                    </ul>
+                </div>
+                <div class="claim-right">
+                    <form class="claim-form" id="claimForm">
+                        <div class="cf-field"><input type="text" placeholder="Your Name" required></div>
+                        <div class="cf-field"><input type="tel" placeholder="Phone Number" required></div>
+                        <div class="cf-field"><input type="email" placeholder="Email (optional)"></div>
+                        <div class="cf-field">
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option>Ceramic Coating</option>
+                                <option>Paint Correction</option>
+                                <option>Interior Detailing</option>
+                                <option>Foam Wash</option>
+                                <option>Engine Cleaning</option>
+                                <option>Headlight Restoration</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg claim-btn"><i class="fas fa-bolt"></i> Claim 30% Off Now</button>
+                        <p class="cf-note"><i class="fas fa-lock"></i> Your info is safe. No spam, ever.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-name">Nyvex</span>
+                            
+                        </div>
+                    </div>
+                    <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#wash">Foam Wash</a></li>
+                        <li><a href="services.html#engine">Engine Cleaning</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Main Street, City, State</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nyvex.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Sat: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Countdown Timer
+        function startCountdown() {
+            const end = new Date();
+            end.setDate(end.getDate() + 2);
+            end.setHours(23, 59, 59);
+
+            function update() {
+                const now = new Date();
+                const diff = end - now;
+                if (diff <= 0) return;
+
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const countdownEl = document.getElementById('countdown');
+                if (countdownEl) {
+                    countdownEl.textContent = 
+                        `${String(d).padStart(2,'0')}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+                }
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+        startCountdown();
+
+        // Form
+        document.getElementById('claimForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('🎉 Offer claimed! We will call you within 30 minutes to confirm your booking.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

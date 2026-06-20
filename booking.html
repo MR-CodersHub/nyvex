@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Book Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+                        <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="promo.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-text">
+                <span class="page-hero-tag">Schedule Now</span>
+                <h1 class="page-hero-title">Book Your <span class="accent">Appointment</span></h1>
+                <p class="page-hero-desc">Choose your service, pick a date, and we'll come to you. Simple and hassle-free.</p>
+            </div>
+            <div class="page-hero-deco"><i class="fas fa-calendar-check"></i></div>
+        </div>
+    </section>
+
+    <!-- Why Book With Us -->
+    <section class="why-book-section">
+        <div class="container">
+            <div class="why-book-badges">
+                <div class="why-badge">
+                    <i class="fas fa-home"></i>
+                    <span>Doorstep Service</span>
+                </div>
+                <div class="why-badge">
+                    <i class="fas fa-tag"></i>
+                    <span>No Hidden Fees</span>
+                </div>
+                <div class="why-badge">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Satisfaction Guaranteed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-layout">
+                <!-- Steps Progress -->
+                <div class="booking-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">1</div>
+                        <span>Service</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">2</div>
+                        <span>Vehicle</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">3</div>
+                        <span>Schedule</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-circle">4</div>
+                        <span>Confirm</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step active" id="step1">
+                    <h2>Select Your Service</h2>
+                    <p class="step-desc">Choose a package or individual services</p>
+
+                    <!-- Package Selection -->
+                    <div class="package-select">
+                        <h3 class="package-select-title">Packages</h3>
+                        <div class="package-select-grid">
+                            <label class="package-select-card">
+                                <input type="radio" name="package" value="basic" data-price="1499">
+                                <div class="psc-inner">
+                                    <span class="psc-name">Basic</span>
+                                    <span class="psc-amt">₹1,499</span>
+                                    <span class="psc-desc">Exterior + Interior Clean</span>
+                                </div>
+                            </label>
+                            <label class="package-select-card popular">
+                                <input type="radio" name="package" value="standard" data-price="4999">
+                                <div class="psc-inner">
+                                    <span class="psc-tag">Popular</span>
+                                    <span class="psc-name">Standard</span>
+                                    <span class="psc-amt">₹4,999</span>
+                                    <span class="psc-desc">Clean + Protection + Scratch Removal</span>
+                                </div>
+                            </label>
+                            <label class="package-select-card">
+                                <input type="radio" name="package" value="premium" data-price="8999">
+                                <div class="psc-inner">
+                                    <span class="psc-name">Premium</span>
+                                    <span class="psc-amt">₹8,999</span>
+                                    <span class="psc-desc">Everything + UV Protection + Warranty</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="or-divider"><span>OR choose individual services</span></div>
+
+                    <div class="service-select-grid">
+                        <label class="service-select-card">
+                            <input type="checkbox" name="service" value="ceramic">
+                            <div class="select-card-inner">
+                                <div class="select-card-icon"><i class="fas fa-shield-alt"></i></div>
+                                <h4>Ceramic Coating</h4>
+                                <span class="select-price">From ₹4,999</span>
+                            </div>
+                        </label>
+                        <label class="service-select-card">
+                            <input type="checkbox" name="service" value="paint">
+                            <div class="select-card-inner">
+                                <div class="select-card-icon"><i class="fas fa-magic"></i></div>
+                                <h4>Paint Correction</h4>
+                                <span class="select-price">From ₹2,999</span>
+                            </div>
+                        </label>
+                        <label class="service-select-card">
+                            <input type="checkbox" name="service" value="interior">
+                            <div class="select-card-inner">
+                                <div class="select-card-icon"><i class="fas fa-couch"></i></div>
+                                <h4>Interior Detailing</h4>
+                                <span class="select-price">From ₹1,499</span>
+                            </div>
+                        </label>
+                        <label class="service-select-card">
+                            <input type="checkbox" name="service" value="foam">
+                            <div class="select-card-inner">
+                                <div class="select-card-icon"><i class="fas fa-shower"></i></div>
+                                <h4>Foam Wash</h4>
+                                <span class="select-price">From ₹999</span>
+                            </div>
+                        </label>
+                        <label class="service-select-card">
+                            <input type="checkbox" name="service" value="engine">
+                            <div class="select-card-inner">
+                                <div class="select-card-icon"><i class="fas fa-cog"></i></div>
+                                <h4>Engine Cleaning</h4>
+                                <span class="select-price">From ₹799</span>
+                            </div>
+                        </label>
+                        <label class="service-select-card">
+                            <input type="checkbox" name="service" value="headlight">
+                            <div class="select-card-inner">
+                                <div class="select-card-icon"><i class="fas fa-lightbulb"></i></div>
+                                <h4>Headlight Restoration</h4>
+                                <span class="select-price">From ₹599</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="price-estimate" id="priceEstimate">
+                        <i class="fas fa-receipt"></i>
+                        <span>Estimated Total: <strong>₹0</strong></span>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-primary next-btn" data-next="2">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Vehicle Details -->
+                <div class="booking-step" id="step2">
+                    <h2>Vehicle Details</h2>
+                    <p class="step-desc">Tell us about your vehicle</p>
+                    <div class="booking-form-grid">
+                        <div class="form-group">
+                            <label>Vehicle Type</label>
+                            <select id="vehicleType">
+                                <option value="">Select vehicle type</option>
+                                <option value="hatchback">Hatchback</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV / MUV</option>
+                                <option value="luxury">Luxury / Sports</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Brand</label>
+                            <input type="text" placeholder="e.g. Hyundai, Toyota, BMW">
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Model</label>
+                            <input type="text" placeholder="e.g. Creta, Camry, 3 Series">
+                        </div>
+                        <div class="form-group">
+                            <label>Registration Number</label>
+                            <input type="text" placeholder="e.g. TN 01 AB 1234">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Vehicle Color</label>
+                            <input type="text" placeholder="e.g. Black, White, Silver">
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-btn" data-prev="1"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary next-btn" data-next="3">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Schedule -->
+                <div class="booking-step" id="step3">
+                    <h2>Pick Date & Time</h2>
+                    <p class="step-desc">Choose when you'd like us to come</p>
+                    <div class="booking-form-grid">
+                        <div class="form-group">
+                            <label>Preferred Date</label>
+                            <input type="date" id="bookingDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Time</label>
+                            <select id="bookingTime">
+                                <option value="">Select time slot</option>
+                                <option value="8am">8:00 AM - 10:00 AM</option>
+                                <option value="10am">10:00 AM - 12:00 PM</option>
+                                <option value="12pm">12:00 PM - 2:00 PM</option>
+                                <option value="2pm">2:00 PM - 4:00 PM</option>
+                                <option value="4pm">4:00 PM - 6:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Service Location</label>
+                            <input type="text" placeholder="Enter your full address">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Additional Notes (Optional)</label>
+                            <textarea rows="3" placeholder="Any special requests or instructions..."></textarea>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-btn" data-prev="2"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary next-btn" data-next="4">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div class="booking-step" id="step4">
+                    <h2>Confirm Your Booking</h2>
+                    <p class="step-desc">Review your details and submit</p>
+                    <div class="confirmation-card">
+                        <div class="confirm-row">
+                            <span class="confirm-label"><i class="fas fa-concierge-bell"></i> Services</span>
+                            <span class="confirm-value" id="confirmServices">—</span>
+                        </div>
+                        <div class="confirm-row">
+                            <span class="confirm-label"><i class="fas fa-car"></i> Vehicle</span>
+                            <span class="confirm-value" id="confirmVehicle">—</span>
+                        </div>
+                        <div class="confirm-row">
+                            <span class="confirm-label"><i class="fas fa-calendar"></i> Date & Time</span>
+                            <span class="confirm-value" id="confirmDate">—</span>
+                        </div>
+                        <div class="confirm-row">
+                            <span class="confirm-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                            <span class="confirm-value" id="confirmLocation">—</span>
+                        </div>
+                    </div>
+                    <div class="confirm-contact">
+                        <h3>Your Contact Info</h3>
+                        <div class="booking-form-grid">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Your full name" id="contactName">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="+91 98765 43210" id="contactPhone">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Email</label>
+                                <input type="email" placeholder="your@email.com" id="contactEmail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-btn" data-prev="3"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary" id="submitBooking"><i class="fas fa-check"></i> Confirm Booking</button>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="booking-step" id="stepSuccess" style="display:none;">
+                    <div class="success-message">
+                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                        <h2>Booking Confirmed!</h2>
+                        <p>Thank you for choosing Nyvex. We've received your booking and will send a confirmation to your email and phone shortly.</p>
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-name">Nyvex</span>
+                            
+                        </div>
+                    </div>
+                    <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#wash">Foam Wash</a></li>
+                        <li><a href="services.html#engine">Engine Cleaning</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Main Street, City, State</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nyvex.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Sat: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

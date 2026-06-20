@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+                        <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="promo.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-text">
+                <span class="page-hero-tag">Our Work</span>
+                <h1 class="page-hero-title">The <span class="accent">Gallery</span></h1>
+                <p class="page-hero-desc">Real results on real cars. See the transformation our detailing makes.</p>
+            </div>
+            <div class="page-hero-deco"><i class="fas fa-images"></i></div>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <section class="gallery-content">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="gallery-filters">
+                <button class="gallery-filter-btn active" data-filter="all">All Work</button>
+                <button class="gallery-filter-btn" data-filter="ceramic">Ceramic Coating</button>
+                <button class="gallery-filter-btn" data-filter="interior">Interior</button>
+                <button class="gallery-filter-btn" data-filter="paint">Paint Correction</button>
+                <button class="gallery-filter-btn" data-filter="wash">Foam Wash</button>
+                <button class="gallery-filter-btn" data-filter="engine">Engine Cleaning</button>
+                <button class="gallery-filter-btn" data-filter="headlight">Headlight</button>
+            </div>
+
+            <!-- Before/After Grid -->
+            <div class="gallery-grid">
+                <!-- Ceramic Coating -->
+                <div class="gallery-item" data-filter="ceramic">
+                    <div class="ba-container">
+                        <div class="ba-image ba-before">
+                            <img src="images/ceramic coating-before.jpg.jpeg" alt="Before Ceramic Coating">
+                            <span class="ba-label">Before</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="images/ceramic coating-after.jpg.jpeg" alt="After Ceramic Coating">
+                            <span class="ba-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider">
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h3>Ceramic Coating</h3>
+                        <p>Long lasting protection with a mirror-like glossy finish</p>
+                    </div>
+                </div>
+
+                <!-- Interior Detailing -->
+                <div class="gallery-item" data-filter="interior">
+                    <div class="ba-container">
+                        <div class="ba-image ba-before">
+                            <img src="images/interior detailing-before.jpg.jpeg" alt="Before Interior Detailing">
+                            <span class="ba-label">Before</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="images/interior detailing-after.jpg.jpeg" alt="After Interior Detailing">
+                            <span class="ba-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider">
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h3>Interior Detailing</h3>
+                        <p>Deep clean & fresh — every surface restored to perfection</p>
+                    </div>
+                </div>
+
+                <!-- Paint Correction -->
+                <div class="gallery-item" data-filter="paint">
+                    <div class="ba-container">
+                        <div class="ba-image ba-before">
+                            <img src="images/paint correction - before.jpg.jpeg" alt="Before Paint Correction">
+                            <span class="ba-label">Before</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="images/paint correction-after.jpg.jpeg" alt="After Paint Correction">
+                            <span class="ba-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider">
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h3>Paint Correction</h3>
+                        <p>Swirl marks & scratches removed for a flawless mirror finish</p>
+                    </div>
+                </div>
+
+                <!-- Foam Wash -->
+                <div class="gallery-item" data-filter="wash">
+                    <div class="ba-container">
+                        <div class="ba-image ba-before">
+                            <img src="images/foam wash-before.jpg.jpeg" alt="Before Foam Wash">
+                            <span class="ba-label">Before</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="images/foam wash-after.jpg.jpeg" alt="After Foam Wash">
+                            <span class="ba-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider">
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h3>Foam Wash</h3>
+                        <p>Spotless finish with premium foam and hand wash technique</p>
+                    </div>
+                </div>
+
+                <!-- Engine Cleaning -->
+                <div class="gallery-item" data-filter="engine">
+                    <div class="ba-container">
+                        <div class="ba-image ba-before">
+                            <img src="images/engine cleaning-before.jpg.jpeg" alt="Before Engine Cleaning">
+                            <span class="ba-label">Before</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="images/engine cleaning-after.jpg.jpeg" alt="After Engine Cleaning">
+                            <span class="ba-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider">
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h3>Engine Cleaning</h3>
+                        <p>Degreased and detailed engine bay looking showroom fresh</p>
+                    </div>
+                </div>
+
+                <!-- Headlight Restoration -->
+                <div class="gallery-item" data-filter="headlight">
+                    <div class="ba-container">
+                        <div class="ba-image ba-before">
+                            <img src="images/headlight restoration-before.jpg.jpeg" alt="Before Headlight Restoration">
+                            <span class="ba-label">Before</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="images/headlight restoration-after.jpg.jpeg" alt="After Headlight Restoration">
+                            <span class="ba-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider">
+                        <div class="ba-handle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h3>Headlight Restoration</h3>
+                        <p>Cloudy & yellowed headlights restored to crystal clear</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Stories -->
+    <section class="customer-stories">
+        <div class="container">
+            <div class="section-header" style="text-align:center; margin-bottom:40px;">
+                <h2 style="font-size:28px; font-weight:700;">Customer <span class="accent">Stories</span></h2>
+                <p style="color:var(--text-secondary); font-size:15px; margin-top:8px;">Hear what our customers have to say</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="story-text">Absolutely blown away by the ceramic coating results. My BMW looks better than the day I bought it. The team was professional and thorough.</p>
+                    <div class="story-author">
+                        <div class="story-avatar">RS</div>
+                        <div class="story-info">
+                            <strong>Rahul Sharma</strong>
+                            <span>BMW 3 Series • Ceramic Coating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="story-text">The interior detailing was incredible. They removed stains I thought were permanent. My Honda City smells and feels brand new inside.</p>
+                    <div class="story-author">
+                        <div class="story-avatar">PM</div>
+                        <div class="story-info">
+                            <strong>Priya Menon</strong>
+                            <span>Honda City • Interior Detailing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="story-text">Got paint correction done on my Audi and the swirl marks are completely gone. The mirror finish is unreal. Highly recommend Nyvex!</p>
+                    <div class="story-author">
+                        <div class="story-avatar">AK</div>
+                        <div class="story-info">
+                            <strong>Arjun Kumar</strong>
+                            <span>Audi A4 • Paint Correction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-name">Nyvex</span>
+                            
+                        </div>
+                    </div>
+                    <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#wash">Foam Wash</a></li>
+                        <li><a href="services.html#engine">Engine Cleaning</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Main Street, City, State</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nyvex.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Sat: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

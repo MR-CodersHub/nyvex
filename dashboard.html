@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="booking.html" class="mobile-nav-link"><i class="fas fa-calendar"></i> Book Now</a>
+            <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a>
+            <a href="blog.html" class="mobile-nav-link"><i class="fas fa-blog"></i> Blog</a>
+            <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About</a>
+            <a href="admin.html" class="mobile-nav-link"><i class="fas fa-cogs"></i> Admin</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dash-page">
+        <div class="container">
+
+            <!-- Profile Banner -->
+            <div class="profile-banner">
+                <div class="profile-banner-left">
+                    <div class="pb-avatar">S</div>
+                    <div class="pb-info">
+                        <h1>Hello, <span class="accent">Shri</span> 👋</h1>
+                        <p>Welcome to your dashboard</p>
+                    </div>
+                </div>
+                <div class="profile-banner-right">
+                    <a href="booking.html" class="btn btn-primary">+ New Booking</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">Logout</a>
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="dash-tabs">
+                <button class="dash-tab-btn active" data-tab="dashboard"><i class="fas fa-th-large"></i> Dashboard</button>
+                <button class="dash-tab-btn" data-tab="mybookings"><i class="fas fa-calendar-alt"></i> My Bookings</button>
+                <button class="dash-tab-btn" data-tab="track"><i class="fas fa-route"></i> Track Services</button>
+                <button class="dash-tab-btn" data-tab="settings"><i class="fas fa-cog"></i> Settings</button>
+            </div>
+
+            <!-- ===== Dashboard Tab ===== -->
+            <div class="dash-tab active" id="dashboard">
+                <!-- Stat Cards -->
+                <div class="dash-grid-3">
+                    <div class="glass-card">
+                        <div class="gc-top">
+                            <div class="gc-icon blue"><i class="fas fa-calendar-check"></i></div>
+                            <span class="gc-badge">Next Up</span>
+                        </div>
+                        <h3>29 May 2026</h3>
+                        <p>10:00 AM • Ceramic Coating</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="gc-top">
+                            <div class="gc-icon gold"><i class="fas fa-coins"></i></div>
+                            <span class="gc-badge">Rewards</span>
+                        </div>
+                        <h3>250 Points</h3>
+                        <p>Available to redeem</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="gc-top">
+                            <div class="gc-icon green"><i class="fas fa-truck"></i></div>
+                            <span class="gc-badge live">Live</span>
+                        </div>
+                        <h3 class="accent">On the Way</h3>
+                        <p>Our team is heading to you</p>
+                    </div>
+                </div>
+
+                <!-- Loyalty Rewards -->
+                <div class="loyalty-rewards-card glass-card full" style="margin-bottom:12px;">
+                    <h3 class="card-title"><i class="fas fa-trophy"></i> Loyalty Level: Silver</h3>
+                    <div class="loyalty-progress-wrapper">
+                        <div class="loyalty-bar">
+                            <div class="loyalty-fill" style="width:50%"></div>
+                        </div>
+                        <div class="loyalty-info">
+                            <span class="loyalty-points">250 / 500 points</span>
+                            <span class="loyalty-next">250 more points to <strong>Gold</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tracker + Recent -->
+                <div class="dash-grid-2">
+                    <div class="glass-card full">
+                        <h3 class="card-title"><i class="fas fa-route"></i> Booking Tracker</h3>
+                        <div class="horizontal-tracker">
+                            <div class="ht-step done"><div class="ht-dot"><i class="fas fa-check"></i></div><span>Confirmed</span></div>
+                            <div class="ht-line done"></div>
+                            <div class="ht-step done"><div class="ht-dot"><i class="fas fa-check"></i></div><span>Assigned</span></div>
+                            <div class="ht-line done"></div>
+                            <div class="ht-step current"><div class="ht-dot"><i class="fas fa-truck"></i></div><span>On the Way</span></div>
+                            <div class="ht-line"></div>
+                            <div class="ht-step"><div class="ht-dot"></div><span>Started</span></div>
+                            <div class="ht-line"></div>
+                            <div class="ht-step"><div class="ht-dot"></div><span>Completed</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="glass-card">
+                        <h3 class="card-title"><i class="fas fa-history"></i> Recent Bookings</h3>
+                        <div class="recent-list">
+                            <div class="rl-item">
+                                <div class="rl-left"><div class="rl-icon"><i class="fas fa-shield-alt"></i></div><div><strong>Ceramic Coating</strong><span>30 Apr 2026</span></div></div>
+                                <span class="pill green">Completed</span>
+                            </div>
+                            <div class="rl-item">
+                                <div class="rl-left"><div class="rl-icon"><i class="fas fa-couch"></i></div><div><strong>Interior Detailing</strong><span>1 Apr 2026</span></div></div>
+                                <span class="pill green">Completed</span>
+                            </div>
+                            <div class="rl-item">
+                                <div class="rl-left"><div class="rl-icon"><i class="fas fa-shower"></i></div><div><strong>Foam Wash</strong><span>15 Mar 2026</span></div></div>
+                                <span class="pill green">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-title-row">
+                            <h3 class="card-title"><i class="fas fa-car"></i> My Vehicles</h3>
+                            <button class="btn-icon-sm" id="showAddVehicle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <!-- Add Vehicle Form -->
+                        <div class="inline-form" id="addVehicleForm" style="display:none;">
+                            <input type="text" id="vName" placeholder="Vehicle name (e.g. Toyota Camry)">
+                            <input type="text" id="vReg" placeholder="Registration (e.g. TN 01 AB 1234)">
+                            <input type="text" id="vColor" placeholder="Color (e.g. Black)">
+                            <div class="inline-form-btns">
+                                <button class="btn btn-primary btn-sm" id="saveVehicle">Add</button>
+                                <button class="btn btn-outline btn-sm" id="cancelVehicle">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="vehicle-list" id="vehicleList">
+                            <div class="vl-item">
+                                <div class="vl-icon"><i class="fas fa-car-side"></i></div>
+                                <div class="vl-info"><strong>BMW 3 Series</strong><span>TN 01 AB 1234 • Black</span></div>
+                                <button class="btn-icon-sm edit"><i class="fas fa-pen"></i></button>
+                            </div>
+                            <div class="vl-item">
+                                <div class="vl-icon"><i class="fas fa-car-side"></i></div>
+                                <div class="vl-info"><strong>Honda City</strong><span>TN 09 CD 5678 • White</span></div>
+                                <button class="btn-icon-sm edit"><i class="fas fa-pen"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== My Bookings Tab ===== -->
+            <div class="dash-tab" id="mybookings">
+                <div class="glass-card full">
+                    <div class="bookings-table">
+                        <div class="bt-head"><span>Service</span><span>Vehicle</span><span>Date</span><span>Status</span></div>
+                        <div class="bt-row"><span><i class="fas fa-shield-alt"></i> Ceramic Coating</span><span>BMW 3 Series</span><span>29 May 2026</span><span class="pill accent">Upcoming</span></div>
+                        <div class="bt-row"><span><i class="fas fa-shield-alt"></i> Ceramic Coating</span><span>Honda City</span><span>30 Apr 2026</span><span class="pill green">Completed</span></div>
+                        <div class="bt-row"><span><i class="fas fa-couch"></i> Interior Detailing</span><span>BMW 3 Series</span><span>1 Apr 2026</span><span class="pill green">Completed</span></div>
+                        <div class="bt-row"><span><i class="fas fa-shower"></i> Foam Wash</span><span>Honda City</span><span>15 Mar 2026</span><span class="pill green">Completed</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Track Tab ===== -->
+            <div class="dash-tab" id="track">
+                <div class="glass-card full">
+                    <div class="track-header">
+                        <div><h3>Ceramic Coating</h3><p>BMW 3 Series • TN 01 AB 1234</p></div>
+                        <div class="track-badges"><span><i class="fas fa-user-tie"></i> Arun Kumar</span><span><i class="fas fa-clock"></i> ETA: 15 mins</span></div>
+                    </div>
+                    <div class="vertical-tracker">
+                        <div class="vt-step done"><div class="vt-dot"><i class="fas fa-check"></i></div><div class="vt-info"><strong>Booking Confirmed</strong><span>9:00 AM</span></div></div>
+                        <div class="vt-step done"><div class="vt-dot"><i class="fas fa-check"></i></div><div class="vt-info"><strong>Team Assigned</strong><span>9:15 AM</span></div></div>
+                        <div class="vt-step current"><div class="vt-dot"><i class="fas fa-truck"></i></div><div class="vt-info"><strong>On the Way</strong><span>9:30 AM</span></div></div>
+                        <div class="vt-step"><div class="vt-dot"></div><div class="vt-info"><strong>Service Started</strong><span>—</span></div></div>
+                        <div class="vt-step"><div class="vt-dot"></div><div class="vt-info"><strong>Completed</strong><span>—</span></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Settings Tab ===== -->
+            <div class="dash-tab" id="settings">
+                <div class="glass-card full compact">
+                    <h3 class="card-title"><i class="fas fa-user-edit"></i> Profile Settings</h3>
+                    <div class="s-form">
+                        <div class="s-row"><div class="s-field"><label>Name</label><input value="Shri"></div><div class="s-field"><label>Email</label><input value="shri@email.com"></div><div class="s-field"><label>Phone</label><input value="+91 98765 43210"></div><div class="s-field"><label>Address</label><input value="Chennai, TN"></div></div>
+                        <button class="btn btn-primary btn-sm">Save Changes</button>
+                    </div>
+                </div>
+                <div class="dash-grid-2 mt-16">
+                    <div class="glass-card compact">
+                        <h3 class="card-title"><i class="fas fa-bell"></i> Notifications</h3>
+                        <div class="tog-list">
+                            <div class="tog-row"><span>Email Notifications</span><label class="tog"><input type="checkbox" checked><span class="tog-s"></span></label></div>
+                            <div class="tog-row"><span>SMS Alerts</span><label class="tog"><input type="checkbox" checked><span class="tog-s"></span></label></div>
+                            <div class="tog-row"><span>Promotional Offers</span><label class="tog"><input type="checkbox"><span class="tog-s"></span></label></div>
+                        </div>
+                    </div>
+                    <div class="glass-card compact">
+                        <h3 class="card-title"><i class="fas fa-lock"></i> Security</h3>
+                        <div class="tog-list">
+                            <div class="tog-row"><span>Two-Factor Auth</span><label class="tog"><input type="checkbox"><span class="tog-s"></span></label></div>
+                            <div class="tog-row"><span>Login Alerts</span><label class="tog"><input type="checkbox" checked><span class="tog-s"></span></label></div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" style="margin-top:14px; width:100%;">Change Password</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        // Hamburger for admin/dashboard (no .nav element)
+        (function() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            if (btn && mobileNav) {
+                btn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('open');
+                    const icon = btn.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('open');
+                        btn.querySelector('i').className = 'fas fa-bars';
+                    });
+                });
+            }
+        })();
+    </script>
+    <script>
+        // Tab switching
+        const tabBtns = document.querySelectorAll('.dash-tab-btn');
+        const tabs = document.querySelectorAll('.dash-tab');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                tabs.forEach(t => t.classList.remove('active'));
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Vehicle Add - Inline Form
+        const showAddBtn = document.getElementById('showAddVehicle');
+        const addForm = document.getElementById('addVehicleForm');
+        const cancelBtn = document.getElementById('cancelVehicle');
+        const saveBtn = document.getElementById('saveVehicle');
+        const vehicleList = document.getElementById('vehicleList');
+
+        showAddBtn.addEventListener('click', () => {
+            addForm.style.display = 'block';
+            showAddBtn.style.display = 'none';
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            addForm.style.display = 'none';
+            showAddBtn.style.display = '';
+        });
+
+        saveBtn.addEventListener('click', () => {
+            const name = document.getElementById('vName').value;
+            const reg = document.getElementById('vReg').value;
+            const color = document.getElementById('vColor').value;
+            if (!name) return;
+
+            const item = document.createElement('div');
+            item.className = 'vl-item';
+            item.innerHTML = `
+                <div class="vl-icon"><i class="fas fa-car-side"></i></div>
+                <div class="vl-info"><strong>${name}</strong><span>${reg || '—'} • ${color || '—'}</span></div>
+                <button class="btn-icon-sm edit"><i class="fas fa-pen"></i></button>
+            `;
+            vehicleList.appendChild(item);
+            attachEdit(item.querySelector('.edit'));
+
+            document.getElementById('vName').value = '';
+            document.getElementById('vReg').value = '';
+            document.getElementById('vColor').value = '';
+            addForm.style.display = 'none';
+            showAddBtn.style.display = '';
+        });
+
+        // Vehicle Edit - Inline
+        function attachEdit(btn) {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.vl-item');
+                const info = item.querySelector('.vl-info');
+                const name = info.querySelector('strong').textContent;
+                const detail = info.querySelector('span').textContent;
+
+                // Replace with edit fields
+                info.innerHTML = `
+                    <input type="text" class="edit-input" value="${name}" placeholder="Vehicle name">
+                    <input type="text" class="edit-input" value="${detail}" placeholder="Reg • Color">
+                    <div class="inline-form-btns">
+                        <button class="btn btn-primary btn-sm save-edit">Save</button>
+                        <button class="btn btn-outline btn-sm cancel-edit">Cancel</button>
+                    </div>
+                `;
+                btn.style.display = 'none';
+
+                info.querySelector('.save-edit').addEventListener('click', () => {
+                    const newName = info.querySelectorAll('.edit-input')[0].value;
+                    const newDetail = info.querySelectorAll('.edit-input')[1].value;
+                    info.innerHTML = `<strong>${newName}</strong><span>${newDetail}</span>`;
+                    btn.style.display = '';
+                });
+
+                info.querySelector('.cancel-edit').addEventListener('click', () => {
+                    info.innerHTML = `<strong>${name}</strong><span>${detail}</span>`;
+                    btn.style.display = '';
+                });
+            });
+        }
+
+        document.querySelectorAll('.btn-icon-sm.edit').forEach(attachEdit);
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="booking.html" class="mobile-nav-link"><i class="fas fa-calendar"></i> Book Now</a>
+            <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a>
+            <a href="blog.html" class="mobile-nav-link"><i class="fas fa-blog"></i> Blog</a>
+            <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About</a>
+            <a href="dashboard.html" class="mobile-nav-link"><i class="fas fa-user-circle"></i> Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <section class="admin-page">
+        <div class="admin-container">
+
+            <!-- Admin Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="overview"><i class="fas fa-chart-line"></i> Overview</button>
+                <button class="admin-tab" data-tab="bookings"><i class="fas fa-calendar-alt"></i> Bookings</button>
+                <button class="admin-tab" data-tab="customers"><i class="fas fa-users"></i> Customers</button>
+                <button class="admin-tab" data-tab="services"><i class="fas fa-concierge-bell"></i> Services</button>
+                <button class="admin-tab" data-tab="team"><i class="fas fa-user-tie"></i> Team</button>
+                <button class="admin-tab" data-tab="revenue"><i class="fas fa-rupee-sign"></i> Revenue</button>
+            </div>
+
+            <!-- ===== Overview Tab ===== -->
+            <div class="admin-content active" id="overview">
+                <!-- Stats -->
+                <div class="admin-stats">
+                    <div class="admin-stat-card">
+                        <div class="asc-icon blue"><i class="fas fa-calendar-check"></i></div>
+                        <div class="asc-info">
+                            <span class="asc-value">24</span>
+                            <span class="asc-label">Today's Bookings</span>
+                        </div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 12%</span>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="asc-icon green"><i class="fas fa-rupee-sign"></i></div>
+                        <div class="asc-info">
+                            <span class="asc-value">₹1,24,500</span>
+                            <span class="asc-label">This Month Revenue</span>
+                        </div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 8%</span>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="asc-icon purple"><i class="fas fa-users"></i></div>
+                        <div class="asc-info">
+                            <span class="asc-value">512</span>
+                            <span class="asc-label">Total Customers</span>
+                        </div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 5%</span>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="asc-icon orange"><i class="fas fa-star"></i></div>
+                        <div class="asc-info">
+                            <span class="asc-value">4.9</span>
+                            <span class="asc-label">Avg Rating</span>
+                        </div>
+                        <span class="asc-trend neutral"><i class="fas fa-minus"></i> 0%</span>
+                    </div>
+                </div>
+
+                <!-- Two Column -->
+                <div class="admin-grid-2">
+                    <!-- Month Comparison Card -->
+                    <div class="admin-card month-comparison-card" style="grid-column: 1 / -1;">
+                        <div class="ac-header">
+                            <h3><i class="fas fa-balance-scale"></i> This Month vs Last Month</h3>
+                        </div>
+                        <div class="month-compare-grid">
+                            <div class="month-col">
+                                <span class="month-label">This Month</span>
+                                <div class="month-stat">
+                                    <span class="month-value">₹1,24,500</span>
+                                    <span class="month-sub">Revenue</span>
+                                </div>
+                                <div class="month-stat">
+                                    <span class="month-value">149</span>
+                                    <span class="month-sub">Bookings</span>
+                                </div>
+                            </div>
+                            <div class="month-divider"></div>
+                            <div class="month-col">
+                                <span class="month-label">Last Month</span>
+                                <div class="month-stat">
+                                    <span class="month-value">₹98,200</span>
+                                    <span class="month-sub">Revenue</span>
+                                </div>
+                                <div class="month-stat">
+                                    <span class="month-value">121</span>
+                                    <span class="month-sub">Bookings</span>
+                                </div>
+                            </div>
+                            <div class="month-changes">
+                                <span class="month-change up"><i class="fas fa-arrow-up"></i> +27% revenue</span>
+                                <span class="month-change up"><i class="fas fa-arrow-up"></i> +23% bookings</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Today's Schedule -->
+                    <div class="admin-card">
+                        <div class="ac-header">
+                            <h3><i class="fas fa-clock"></i> Today's Schedule</h3>
+                            <span class="ac-badge">6 bookings</span>
+                        </div>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="si-time">9:00 AM</div>
+                                <div class="si-info"><strong>Ceramic Coating</strong><span>Rahul S. • BMW 3 Series</span></div>
+                                <span class="pill accent">In Progress</span>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="si-time">11:00 AM</div>
+                                <div class="si-info"><strong>Interior Detailing</strong><span>Priya M. • Honda City</span></div>
+                                <span class="pill blue">Assigned</span>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="si-time">1:00 PM</div>
+                                <div class="si-info"><strong>Foam Wash</strong><span>Arjun P. • Hyundai Creta</span></div>
+                                <span class="pill yellow">Pending</span>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="si-time">3:00 PM</div>
+                                <div class="si-info"><strong>Paint Correction</strong><span>Deepa K. • Audi A4</span></div>
+                                <span class="pill yellow">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="admin-card">
+                        <div class="ac-header">
+                            <h3><i class="fas fa-bolt"></i> Recent Activity</h3>
+                        </div>
+                        <div class="activity-feed">
+                            <div class="af-item">
+                                <div class="af-dot green"></div>
+                                <div><strong>Booking completed</strong> — Foam Wash for Karthik R.<span>10 mins ago</span></div>
+                            </div>
+                            <div class="af-item">
+                                <div class="af-dot blue"></div>
+                                <div><strong>New booking</strong> — Ceramic Coating by Sneha V.<span>25 mins ago</span></div>
+                            </div>
+                            <div class="af-item">
+                                <div class="af-dot orange"></div>
+                                <div><strong>Payment received</strong> — ₹4,999 from Rahul S.<span>1 hour ago</span></div>
+                            </div>
+                            <div class="af-item">
+                                <div class="af-dot purple"></div>
+                                <div><strong>New customer</strong> — Meera J. registered<span>2 hours ago</span></div>
+                            </div>
+                            <div class="af-item">
+                                <div class="af-dot green"></div>
+                                <div><strong>Review received</strong> — 5★ from Arjun P.<span>3 hours ago</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Breakdown -->
+                <div class="admin-card full">
+                    <div class="ac-header">
+                        <h3><i class="fas fa-chart-pie"></i> Service Breakdown (This Month)</h3>
+                    </div>
+                    <div class="service-bars">
+                        <div class="sb-item"><span class="sb-label">Ceramic Coating</span><div class="sb-bar"><div class="sb-fill" style="width:75%"></div></div><span class="sb-val">32</span></div>
+                        <div class="sb-item"><span class="sb-label">Paint Correction</span><div class="sb-bar"><div class="sb-fill" style="width:55%"></div></div><span class="sb-val">24</span></div>
+                        <div class="sb-item"><span class="sb-label">Interior Detailing</span><div class="sb-bar"><div class="sb-fill" style="width:65%"></div></div><span class="sb-val">28</span></div>
+                        <div class="sb-item"><span class="sb-label">Foam Wash</span><div class="sb-bar"><div class="sb-fill" style="width:90%"></div></div><span class="sb-val">45</span></div>
+                        <div class="sb-item"><span class="sb-label">Engine Cleaning</span><div class="sb-bar"><div class="sb-fill" style="width:30%"></div></div><span class="sb-val">12</span></div>
+                        <div class="sb-item"><span class="sb-label">Headlight Restoration</span><div class="sb-bar"><div class="sb-fill" style="width:20%"></div></div><span class="sb-val">8</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Bookings Tab ===== -->
+            <div class="admin-content" id="bookings">
+                <div class="admin-card full">
+                    <div class="ac-header">
+                        <h3><i class="fas fa-calendar-alt"></i> All Bookings</h3>
+                        <div class="ac-filters">
+                            <select id="statusFilter"><option value="all">All Status</option><option value="pending">Pending</option><option value="in-progress">In Progress</option><option value="assigned">Assigned</option><option value="completed">Completed</option></select>
+                            <select id="dateFilter"><option value="all">All Time</option><option value="today">Today</option><option value="week">This Week</option><option value="month">This Month</option></select>
+                        </div>
+                    </div>
+                    <div class="admin-table">
+                        <div class="at-head"><span>Customer</span><span>Service</span><span>Vehicle</span><span>Date</span><span>Status</span><span>Amount</span></div>
+                        <div class="at-row" data-status="in-progress" data-date="29 May"><span>Rahul S.</span><span>Ceramic Coating</span><span>BMW 3 Series</span><span>29 May</span><span class="pill accent">In Progress</span><span>₹4,999</span></div>
+                        <div class="at-row" data-status="assigned" data-date="29 May"><span>Priya M.</span><span>Interior Detailing</span><span>Honda City</span><span>29 May</span><span class="pill blue">Assigned</span><span>₹1,499</span></div>
+                        <div class="at-row" data-status="pending" data-date="29 May"><span>Arjun P.</span><span>Foam Wash</span><span>Hyundai Creta</span><span>29 May</span><span class="pill yellow">Pending</span><span>₹999</span></div>
+                        <div class="at-row" data-status="completed" data-date="28 May"><span>Karthik R.</span><span>Foam Wash</span><span>Maruti Swift</span><span>28 May</span><span class="pill green">Completed</span><span>₹999</span></div>
+                        <div class="at-row" data-status="completed" data-date="28 May"><span>Sneha V.</span><span>Ceramic Coating</span><span>Mercedes C200</span><span>28 May</span><span class="pill green">Completed</span><span>₹6,999</span></div>
+                        <div class="at-row" data-status="pending" data-date="29 May"><span>Deepa K.</span><span>Paint Correction</span><span>Audi A4</span><span>29 May</span><span class="pill yellow">Pending</span><span>₹3,499</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Customers Tab ===== -->
+            <div class="admin-content" id="customers">
+                <div class="admin-card full">
+                    <div class="ac-header">
+                        <h3><i class="fas fa-users"></i> Customers</h3>
+                        <span class="ac-badge">512 total</span>
+                    </div>
+                    <div class="admin-table">
+                        <div class="at-head"><span>Name</span><span>Email</span><span>Phone</span><span>Bookings</span><span>Joined</span></div>
+                        <div class="at-row"><span>Rahul Sharma</span><span>rahul@email.com</span><span>+91 98765 43210</span><span>5</span><span>Jan 2026</span></div>
+                        <div class="at-row"><span>Priya Menon</span><span>priya@email.com</span><span>+91 87654 32109</span><span>3</span><span>Feb 2026</span></div>
+                        <div class="at-row"><span>Arjun Patel</span><span>arjun@email.com</span><span>+91 76543 21098</span><span>4</span><span>Mar 2026</span></div>
+                        <div class="at-row"><span>Sneha Verma</span><span>sneha@email.com</span><span>+91 65432 10987</span><span>2</span><span>Apr 2026</span></div>
+                        <div class="at-row"><span>Karthik R.</span><span>karthik@email.com</span><span>+91 54321 09876</span><span>6</span><span>Jan 2026</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Services Tab ===== -->
+            <div class="admin-content" id="services">
+                <div class="admin-card full">
+                    <div class="ac-header">
+                        <h3><i class="fas fa-concierge-bell"></i> Manage Services</h3>
+                        <button class="btn btn-primary btn-sm" id="addServiceBtn"><i class="fas fa-plus"></i> Add Service</button>
+                    </div>
+                    <!-- Add Service Form (hidden by default) -->
+                    <div class="add-form" id="addServiceForm" style="display:none;">
+                        <div class="add-form-grid">
+                            <div class="af-field"><label>Service Name</label><input type="text" id="newServiceName" placeholder="e.g. Windshield Treatment"></div>
+                            <div class="af-field"><label>Price (From ₹)</label><input type="number" id="newServicePrice" placeholder="e.g. 999"></div>
+                            <div class="af-field"><label>Duration</label><input type="text" id="newServiceDuration" placeholder="e.g. 1-2 hrs"></div>
+                            <div class="af-field"><label>Status</label><select id="newServiceStatus"><option value="Active">Active</option><option value="Inactive">Inactive</option></select></div>
+                        </div>
+                        <div class="add-form-actions">
+                            <button class="btn btn-primary btn-sm" id="saveServiceBtn">Save Service</button>
+                            <button class="btn btn-outline btn-sm" id="cancelServiceBtn">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="admin-table" id="servicesTable">
+                        <div class="at-head"><span>Service</span><span>Price (From)</span><span>Duration</span><span>Bookings</span><span>Status</span></div>
+                        <div class="at-row"><span>Ceramic Coating</span><span>₹4,999</span><span>6-8 hrs</span><span>32</span><span class="pill green">Active</span></div>
+                        <div class="at-row"><span>Paint Correction</span><span>₹2,999</span><span>4-6 hrs</span><span>24</span><span class="pill green">Active</span></div>
+                        <div class="at-row"><span>Interior Detailing</span><span>₹1,499</span><span>2-3 hrs</span><span>28</span><span class="pill green">Active</span></div>
+                        <div class="at-row"><span>Foam Wash</span><span>₹999</span><span>1-2 hrs</span><span>45</span><span class="pill green">Active</span></div>
+                        <div class="at-row"><span>Engine Cleaning</span><span>₹799</span><span>1-2 hrs</span><span>12</span><span class="pill green">Active</span></div>
+                        <div class="at-row"><span>Headlight Restoration</span><span>₹599</span><span>1 hr</span><span>8</span><span class="pill green">Active</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Team Tab ===== -->
+            <div class="admin-content" id="team">
+                <div class="admin-card full">
+                    <div class="ac-header">
+                        <h3><i class="fas fa-user-tie"></i> Team Members</h3>
+                        <button class="btn btn-primary btn-sm" id="addMemberBtn"><i class="fas fa-plus"></i> Add Member</button>
+                    </div>
+                    <!-- Add Member Form (hidden by default) -->
+                    <div class="add-form" id="addMemberForm" style="display:none;">
+                        <div class="add-form-grid">
+                            <div class="af-field"><label>Full Name</label><input type="text" id="newMemberName" placeholder="e.g. John Doe"></div>
+                            <div class="af-field"><label>Role</label><input type="text" id="newMemberRole" placeholder="e.g. Technician"></div>
+                            <div class="af-field"><label>Phone</label><input type="tel" id="newMemberPhone" placeholder="+91 98765 43210"></div>
+                            <div class="af-field"><label>Specialization</label><select id="newMemberSpec"><option value="Ceramic Coating">Ceramic Coating</option><option value="Paint Correction">Paint Correction</option><option value="Interior">Interior Detailing</option><option value="General">General</option></select></div>
+                        </div>
+                        <div class="add-form-actions">
+                            <button class="btn btn-primary btn-sm" id="saveMemberBtn">Add Member</button>
+                            <button class="btn btn-outline btn-sm" id="cancelMemberBtn">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="team-grid" id="teamGrid">
+                        <div class="team-member-card">
+                            <div class="tmc-avatar">AK</div>
+                            <h4>Arun Kumar</h4>
+                            <span class="tmc-role">Lead Detailer</span>
+                            <div class="tmc-stats"><span><i class="fas fa-calendar"></i> 12 jobs</span><span><i class="fas fa-star"></i> 4.9</span></div>
+                            <span class="pill green">Available</span>
+                        </div>
+                        <div class="team-member-card">
+                            <div class="tmc-avatar">DR</div>
+                            <h4>Deepak Raj</h4>
+                            <span class="tmc-role">Senior Technician</span>
+                            <div class="tmc-stats"><span><i class="fas fa-calendar"></i> 8 jobs</span><span><i class="fas fa-star"></i> 4.8</span></div>
+                            <span class="pill accent">On Job</span>
+                        </div>
+                        <div class="team-member-card">
+                            <div class="tmc-avatar">RS</div>
+                            <h4>Ravi Shankar</h4>
+                            <span class="tmc-role">Paint Specialist</span>
+                            <div class="tmc-stats"><span><i class="fas fa-calendar"></i> 10 jobs</span><span><i class="fas fa-star"></i> 4.9</span></div>
+                            <span class="pill green">Available</span>
+                        </div>
+                        <div class="team-member-card">
+                            <div class="tmc-avatar">KS</div>
+                            <h4>Kavitha S</h4>
+                            <span class="tmc-role">Operations</span>
+                            <div class="tmc-stats"><span><i class="fas fa-calendar"></i> — </span><span><i class="fas fa-star"></i> —</span></div>
+                            <span class="pill green">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Revenue Tab ===== -->
+            <div class="admin-content" id="revenue">
+                <div class="admin-stats">
+                    <div class="admin-stat-card">
+                        <div class="asc-icon green"><i class="fas fa-rupee-sign"></i></div>
+                        <div class="asc-info"><span class="asc-value">₹1,24,500</span><span class="asc-label">This Month</span></div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 27%</span>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="asc-icon blue"><i class="fas fa-rupee-sign"></i></div>
+                        <div class="asc-info"><span class="asc-value">₹98,200</span><span class="asc-label">Last Month</span></div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 12%</span>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="asc-icon purple"><i class="fas fa-chart-line"></i></div>
+                        <div class="asc-info"><span class="asc-value">₹8,42,000</span><span class="asc-label">This Year</span></div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 34%</span>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="asc-icon orange"><i class="fas fa-receipt"></i></div>
+                        <div class="asc-info"><span class="asc-value">149</span><span class="asc-label">Total Invoices</span></div>
+                        <span class="asc-trend up"><i class="fas fa-arrow-up"></i> 18%</span>
+                    </div>
+                </div>
+
+                <div class="admin-grid-2">
+                    <div class="admin-card">
+                        <div class="ac-header"><h3><i class="fas fa-chart-bar"></i> Monthly Revenue</h3></div>
+                        <div class="revenue-bars">
+                            <div class="rb-item"><div class="rb-bar" style="height:40%"></div><span>Jan</span></div>
+                            <div class="rb-item"><div class="rb-bar" style="height:55%"></div><span>Feb</span></div>
+                            <div class="rb-item"><div class="rb-bar" style="height:45%"></div><span>Mar</span></div>
+                            <div class="rb-item"><div class="rb-bar" style="height:70%"></div><span>Apr</span></div>
+                            <div class="rb-item"><div class="rb-bar highlight" style="height:85%"></div><span>May</span></div>
+                        </div>
+                    </div>
+                    <div class="admin-card">
+                        <div class="ac-header"><h3><i class="fas fa-trophy"></i> Top Services by Revenue</h3></div>
+                        <div class="top-services-list">
+                            <div class="ts-item"><span class="ts-rank">1</span><div class="ts-info"><strong>Ceramic Coating</strong><span>32 bookings</span></div><span class="ts-amount">₹52,000</span></div>
+                            <div class="ts-item"><span class="ts-rank">2</span><div class="ts-info"><strong>Paint Correction</strong><span>24 bookings</span></div><span class="ts-amount">₹38,400</span></div>
+                            <div class="ts-item"><span class="ts-rank">3</span><div class="ts-info"><strong>Interior Detailing</strong><span>28 bookings</span></div><span class="ts-amount">₹22,100</span></div>
+                            <div class="ts-item"><span class="ts-rank">4</span><div class="ts-info"><strong>Foam Wash</strong><span>45 bookings</span></div><span class="ts-amount">₹12,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-card full">
+                    <div class="ac-header"><h3><i class="fas fa-file-invoice-dollar"></i> Recent Transactions</h3></div>
+                    <div class="admin-table">
+                        <div class="at-head"><span>Customer</span><span>Service</span><span>Date</span><span>Amount</span><span>Payment</span></div>
+                        <div class="at-row"><span>Rahul S.</span><span>Ceramic Coating</span><span>29 May</span><span>₹4,999</span><span class="pill green">Paid</span></div>
+                        <div class="at-row"><span>Karthik R.</span><span>Foam Wash</span><span>28 May</span><span>₹999</span><span class="pill green">Paid</span></div>
+                        <div class="at-row"><span>Sneha V.</span><span>Ceramic Coating</span><span>28 May</span><span>₹6,999</span><span class="pill green">Paid</span></div>
+                        <div class="at-row"><span>Arjun P.</span><span>Foam Wash</span><span>29 May</span><span>₹999</span><span class="pill yellow">Pending</span></div>
+                        <div class="at-row"><span>Deepa K.</span><span>Paint Correction</span><span>29 May</span><span>₹3,499</span><span class="pill yellow">Pending</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        // Hamburger for admin/dashboard (no .nav element)
+        (function() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            if (btn && mobileNav) {
+                btn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('open');
+                    const icon = btn.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('open');
+                        btn.querySelector('i').className = 'fas fa-bars';
+                    });
+                });
+            }
+        })();
+    </script>
+    <script>
+        // Tab switching
+        const adminTabs = document.querySelectorAll('.admin-tab');
+        const adminContents = document.querySelectorAll('.admin-content');
+        adminTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                adminTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                adminContents.forEach(c => c.classList.remove('active'));
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Booking filter functionality
+        const statusFilter = document.getElementById('statusFilter');
+        const dateFilter = document.getElementById('dateFilter');
+        const bookingRows = document.querySelectorAll('#bookings .at-row');
+
+        function filterBookings() {
+            const status = statusFilter.value;
+            const date = dateFilter.value;
+
+            bookingRows.forEach(row => {
+                const rowStatus = row.dataset.status;
+                const rowDate = row.dataset.date;
+
+                let showByStatus = (status === 'all') || (rowStatus === status);
+                let showByDate = true;
+
+                if (date === 'today') {
+                    showByDate = rowDate === '29 May';
+                } else if (date === 'week') {
+                    showByDate = rowDate === '29 May' || rowDate === '28 May';
+                }
+
+                row.style.display = (showByStatus && showByDate) ? 'grid' : 'none';
+            });
+        }
+
+        statusFilter.addEventListener('change', filterBookings);
+        dateFilter.addEventListener('change', filterBookings);
+
+        // ===== Add Service =====
+        const addServiceBtn = document.getElementById('addServiceBtn');
+        const addServiceForm = document.getElementById('addServiceForm');
+        const cancelServiceBtn = document.getElementById('cancelServiceBtn');
+        const saveServiceBtn = document.getElementById('saveServiceBtn');
+        const servicesTable = document.getElementById('servicesTable');
+
+        addServiceBtn.addEventListener('click', () => {
+            addServiceForm.style.display = 'block';
+            addServiceBtn.style.display = 'none';
+        });
+
+        cancelServiceBtn.addEventListener('click', () => {
+            addServiceForm.style.display = 'none';
+            addServiceBtn.style.display = '';
+        });
+
+        saveServiceBtn.addEventListener('click', () => {
+            const name = document.getElementById('newServiceName').value;
+            const price = document.getElementById('newServicePrice').value;
+            const duration = document.getElementById('newServiceDuration').value;
+            const status = document.getElementById('newServiceStatus').value;
+
+            if (!name || !price || !duration) {
+                alert('Please fill all fields');
+                return;
+            }
+
+            const row = document.createElement('div');
+            row.className = 'at-row';
+            row.innerHTML = `<span>${name}</span><span>₹${price}</span><span>${duration}</span><span>0</span><span class="pill green">${status}</span>`;
+            servicesTable.appendChild(row);
+
+            // Reset form
+            document.getElementById('newServiceName').value = '';
+            document.getElementById('newServicePrice').value = '';
+            document.getElementById('newServiceDuration').value = '';
+            addServiceForm.style.display = 'none';
+            addServiceBtn.style.display = '';
+        });
+
+        // ===== Add Team Member =====
+        const addMemberBtn = document.getElementById('addMemberBtn');
+        const addMemberForm = document.getElementById('addMemberForm');
+        const cancelMemberBtn = document.getElementById('cancelMemberBtn');
+        const saveMemberBtn = document.getElementById('saveMemberBtn');
+        const teamGrid = document.getElementById('teamGrid');
+
+        addMemberBtn.addEventListener('click', () => {
+            addMemberForm.style.display = 'block';
+            addMemberBtn.style.display = 'none';
+        });
+
+        cancelMemberBtn.addEventListener('click', () => {
+            addMemberForm.style.display = 'none';
+            addMemberBtn.style.display = '';
+        });
+
+        saveMemberBtn.addEventListener('click', () => {
+            const name = document.getElementById('newMemberName').value;
+            const role = document.getElementById('newMemberRole').value;
+
+            if (!name || !role) {
+                alert('Please fill name and role');
+                return;
+            }
+
+            const initials = name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+
+            const card = document.createElement('div');
+            card.className = 'team-member-card';
+            card.innerHTML = `
+                <div class="tmc-avatar">${initials}</div>
+                <h4>${name}</h4>
+                <span class="tmc-role">${role}</span>
+                <div class="tmc-stats"><span><i class="fas fa-calendar"></i> 0 jobs</span><span><i class="fas fa-star"></i> —</span></div>
+                <span class="pill green">Available</span>
+            `;
+            teamGrid.appendChild(card);
+
+            // Reset form
+            document.getElementById('newMemberName').value = '';
+            document.getElementById('newMemberRole').value = '';
+            document.getElementById('newMemberPhone').value = '';
+            addMemberForm.style.display = 'none';
+            addMemberBtn.style.display = '';
+        });
+    </script>
+</body>
+</html>
+
+
+
+

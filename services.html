@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+                        <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="promo.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-text">
+                <span class="page-hero-tag">What We Offer</span>
+                <h1 class="page-hero-title">Our <span class="accent">Services</span></h1>
+                <p class="page-hero-desc">Premium auto detailing solutions tailored to your vehicle's needs. From basic wash to full ceramic protection.</p>
+            </div>
+            <div class="page-hero-deco"><i class="fas fa-concierge-bell"></i></div>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <!-- Packages -->
+    <section class="packages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Packages</h2>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <span class="package-label">Basic</span>
+                        <h3 class="package-price">₹1,499</h3>
+                        <p>Essential care for your car</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Exterior Clean</li>
+                        <li><i class="fas fa-check"></i> Interior Clean</li>
+                        <li><i class="fas fa-times"></i> Paint Protection</li>
+                        <li><i class="fas fa-times"></i> Scratch Removal</li>
+                        <li><i class="fas fa-times"></i> UV Protection</li>
+                        <li><i class="fas fa-times"></i> Warranty</li>
+                    </ul>
+                    <a href="booking.html?package=basic" class="btn btn-outline package-btn">Choose Basic</a>
+                </div>
+                <div class="package-card popular">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <span class="package-label">Standard</span>
+                        <h3 class="package-price">₹4,999</h3>
+                        <p>Complete protection package</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Exterior Clean</li>
+                        <li><i class="fas fa-check"></i> Interior Clean</li>
+                        <li><i class="fas fa-check"></i> Paint Protection</li>
+                        <li><i class="fas fa-check"></i> Scratch Removal</li>
+                        <li><i class="fas fa-times"></i> UV Protection</li>
+                        <li><i class="fas fa-times"></i> Warranty</li>
+                    </ul>
+                    <a href="booking.html?package=standard" class="btn btn-primary package-btn">Choose Standard</a>
+                </div>
+                <div class="package-card">
+                    <div class="package-header">
+                        <span class="package-label">Premium</span>
+                        <h3 class="package-price">₹8,999</h3>
+                        <p>Ultimate detailing experience</p>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Exterior Clean</li>
+                        <li><i class="fas fa-check"></i> Interior Clean</li>
+                        <li><i class="fas fa-check"></i> Paint Protection</li>
+                        <li><i class="fas fa-check"></i> Scratch Removal</li>
+                        <li><i class="fas fa-check"></i> UV Protection</li>
+                        <li><i class="fas fa-check"></i> 3-Year Warranty</li>
+                    </ul>
+                    <a href="booking.html?package=premium" class="btn btn-outline package-btn">Choose Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="services-list">
+        <div class="container">
+
+            <!-- Ceramic Coating -->
+            <div class="service-detail" id="ceramic">
+                <div class="service-detail-image">
+                    <img src="images/ceramic coating-after.jpg.jpeg" alt="Ceramic Coating">
+                    <div class="service-badge"><i class="fas fa-crown"></i> Premium</div>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Ceramic Coating</h2>
+                    <p class="service-tagline">Ultimate paint protection with a mirror-like finish</p>
+                    <p>Our ceramic coating creates a permanent bond with your vehicle's paint, providing unmatched protection against UV rays, chemical stains, bird droppings, and minor scratches. The hydrophobic layer repels water and keeps your car cleaner for longer.</p>
+                    <div class="service-features">
+                        <div class="service-feature"><i class="fas fa-check"></i> 9H hardness protection</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Hydrophobic water repellent</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> UV & chemical resistance</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> 1-5 year warranty options</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Deep gloss enhancement</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Easy maintenance</div>
+                    </div>
+                    <div class="service-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> 6-8 hours</div>
+                        <div class="meta-item"><i class="fas fa-tag"></i> Starting ₹4,999</div>
+                    </div>
+                    <a href="booking.html?service=ceramic" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Paint Correction -->
+            <div class="service-detail reverse" id="paint">
+                <div class="service-detail-image">
+                    <img src="images/paint correction-after.jpg.jpeg" alt="Paint Correction">
+                    <div class="service-badge"><i class="fas fa-star"></i> Popular</div>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Paint Correction</h2>
+                    <p class="service-tagline">Restore your paint to showroom perfection</p>
+                    <p>Machine polishing to remove swirl marks, light scratches, oxidation, and water spots. We use multi-stage correction techniques to bring back the depth and clarity of your paint, making it look better than new.</p>
+                    <div class="service-features">
+                        <div class="service-feature"><i class="fas fa-check"></i> Swirl mark removal</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Scratch elimination</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Oxidation treatment</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Multi-stage polishing</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Paint depth restoration</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Mirror-like finish</div>
+                    </div>
+                    <div class="service-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> 4-6 hours</div>
+                        <div class="meta-item"><i class="fas fa-tag"></i> Starting ₹2,999</div>
+                    </div>
+                    <a href="booking.html?service=paint" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Interior Detailing -->
+            <div class="service-detail" id="interior">
+                <div class="service-detail-image">
+                    <img src="images/interior detailing-after.jpg.jpeg" alt="Interior Detailing">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Interior Detailing</h2>
+                    <p class="service-tagline">Deep clean every surface inside your cabin</p>
+                    <p>Complete interior restoration including deep vacuuming, steam cleaning, leather conditioning, dashboard treatment, air vent cleaning, and odor elimination. We make your cabin feel brand new.</p>
+                    <div class="service-features">
+                        <div class="service-feature"><i class="fas fa-check"></i> Deep vacuum & extraction</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Leather/fabric conditioning</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Dashboard & console care</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Odor elimination</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Glass cleaning (inside)</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Air vent detailing</div>
+                    </div>
+                    <div class="service-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> 2-3 hours</div>
+                        <div class="meta-item"><i class="fas fa-tag"></i> Starting ₹1,499</div>
+                    </div>
+                    <a href="booking.html?service=interior" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Foam Wash -->
+            <div class="service-detail reverse" id="wash">
+                <div class="service-detail-image">
+                    <img src="images/foam wash.jpg.jpeg" alt="Foam Wash">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Foam Wash</h2>
+                    <p class="service-tagline">Gentle yet thorough exterior cleaning</p>
+                    <p>Premium snow foam pre-wash followed by a careful two-bucket hand wash. We use pH-neutral shampoo that's safe for coatings and wax, leaving your car spotless without any risk of scratching.</p>
+                    <div class="service-features">
+                        <div class="service-feature"><i class="fas fa-check"></i> Snow foam pre-wash</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Two-bucket hand wash</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Wheel & tire cleaning</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Glass polish</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Tire dressing</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Coating-safe shampoo</div>
+                    </div>
+                    <div class="service-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> 1-2 hours</div>
+                        <div class="meta-item"><i class="fas fa-tag"></i> Starting ₹999</div>
+                    </div>
+                    <a href="booking.html?service=foam" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Engine Cleaning -->
+            <div class="service-detail" id="engine">
+                <div class="service-detail-image">
+                    <img src="images/engine cleaning-after.jpg.jpeg" alt="Engine Cleaning">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Engine Bay Cleaning</h2>
+                    <p class="service-tagline">A clean engine runs better and lasts longer</p>
+                    <p>Professional degreasing and detailing of your engine compartment. We carefully clean all surfaces, dress rubber and plastic components, and leave your engine bay looking factory-fresh.</p>
+                    <div class="service-features">
+                        <div class="service-feature"><i class="fas fa-check"></i> Safe degreasing</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Component dressing</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Hose & wire cleaning</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Corrosion prevention</div>
+                    </div>
+                    <div class="service-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> 1-2 hours</div>
+                        <div class="meta-item"><i class="fas fa-tag"></i> Starting ₹799</div>
+                    </div>
+                    <a href="booking.html?service=engine" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Headlight Restoration -->
+            <div class="service-detail reverse" id="headlight">
+                <div class="service-detail-image">
+                    <img src="images/headlight restoration-after.jpg.jpeg" alt="Headlight Restoration">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Headlight Restoration</h2>
+                    <p class="service-tagline">Crystal clear visibility, like new again</p>
+                    <p>Restore cloudy, yellowed, or hazy headlights to their original clarity. We sand, polish, and seal the lens to improve both appearance and nighttime visibility — a safety upgrade that looks great too.</p>
+                    <div class="service-features">
+                        <div class="service-feature"><i class="fas fa-check"></i> Oxidation removal</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Multi-stage sanding</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> UV sealant protection</div>
+                        <div class="service-feature"><i class="fas fa-check"></i> Improved visibility</div>
+                    </div>
+                    <div class="service-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> 1 hour</div>
+                        <div class="meta-item"><i class="fas fa-tag"></i> Starting ₹599</div>
+                    </div>
+                    <a href="booking.html?service=headlight" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing CTA -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Not Sure Which Service You Need?</h2>
+                <p>Contact us for a free consultation. We'll assess your vehicle and recommend the perfect package.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Chat With Us</a>
+                    <a href="#" class="btn btn-outline"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-name">Nyvex</span>
+                            
+                        </div>
+                    </div>
+                    <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#ceramic">Ceramic Coating</a></li>
+                        <li><a href="#interior">Interior Detailing</a></li>
+                        <li><a href="#paint">Paint Correction</a></li>
+                        <li><a href="#wash">Foam Wash</a></li>
+                        <li><a href="#engine">Engine Cleaning</a></li>
+                        <li><a href="#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Main Street, City, State</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nyvex.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Sat: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

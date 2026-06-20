@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Under Maintenance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .maintenance-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .maintenance-page::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            opacity: 0.08;
+            border-radius: 50%;
+        }
+
+        .maintenance-content {
+            position: relative;
+            z-index: 1;
+            max-width: 520px;
+        }
+
+        .maintenance-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgba(79, 227, 227, 0.06);
+            border: 2px solid rgba(79, 227, 227, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 36px;
+            color: var(--accent);
+            animation: spin 8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .maintenance-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .maintenance-logo .logo-icon {
+            width: 42px;
+            height: 42px;
+        }
+
+        .maintenance-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+
+        .maintenance-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 36px;
+        }
+
+        .maintenance-timer {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .mt-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 16px 20px;
+            min-width: 70px;
+        }
+
+        .mt-value {
+            display: block;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .mt-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .maintenance-notify {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 28px;
+        }
+
+        .maintenance-notify p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .notify-form {
+            display: flex;
+            gap: 8px;
+        }
+
+        .notify-form input {
+            flex: 1;
+            padding: 12px 16px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .notify-form input:focus {
+            border-color: var(--accent);
+        }
+
+        .notify-form button {
+            padding: 12px 20px;
+            background: var(--accent);
+            border: none;
+            border-radius: 10px;
+            color: #020817;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .notify-form button:hover {
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .maintenance-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .maintenance-socials a {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .maintenance-socials a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(79, 227, 227, 0.06);
+        }
+
+        @media (max-width: 480px) {
+            .maintenance-title { font-size: 22px; }
+            .maintenance-timer { gap: 10px; }
+            .mt-block { padding: 12px 14px; min-width: 58px; }
+            .mt-value { font-size: 22px; }
+            .notify-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <section class="maintenance-page">
+        <div class="maintenance-content">
+            <div class="maintenance-logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </div>
+
+            <div class="maintenance-icon"><i class="fas fa-wrench"></i></div>
+
+            <h1 class="maintenance-title">We're Under Maintenance</h1>
+            <p class="maintenance-desc">We're making some improvements to serve you better. Our site will be back online shortly. Thank you for your patience.</p>
+
+            <!-- Countdown -->
+            <div class="maintenance-timer">
+                <div class="mt-block">
+                    <span class="mt-value" id="mt-hours">04</span>
+                    <span class="mt-label">Hours</span>
+                </div>
+                <div class="mt-block">
+                    <span class="mt-value" id="mt-mins">30</span>
+                    <span class="mt-label">Minutes</span>
+                </div>
+                <div class="mt-block">
+                    <span class="mt-value" id="mt-secs">00</span>
+                    <span class="mt-label">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Notify -->
+            <div class="maintenance-notify">
+                <p>Get notified when we're back:</p>
+                <form class="notify-form" id="notifyForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+            </div>
+
+            <!-- Socials -->
+            <div class="maintenance-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') document.body.setAttribute('data-theme', 'light');
+
+        // Countdown (4.5 hours from now)
+        const endTime = new Date().getTime() + (4.5 * 60 * 60 * 1000);
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = endTime - now;
+
+            if (diff <= 0) {
+                document.getElementById('mt-hours').textContent = '00';
+                document.getElementById('mt-mins').textContent = '00';
+                document.getElementById('mt-secs').textContent = '00';
+                return;
+            }
+
+            const h = Math.floor(diff / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('mt-hours').textContent = String(h).padStart(2, '0');
+            document.getElementById('mt-mins').textContent = String(m).padStart(2, '0');
+            document.getElementById('mt-secs').textContent = String(s).padStart(2, '0');
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+
+        // Notify form
+        document.getElementById('notifyForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thanks! We will notify you when the site is back.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
+
+
+

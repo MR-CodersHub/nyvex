@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    
+                </div>
+            </a>
+                        <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="promo.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-text">
+                <span class="page-hero-tag">Need Help?</span>
+                <h1 class="page-hero-title">Frequently Asked <span class="accent">Questions</span></h1>
+                <p class="page-hero-desc">Got questions? We've got answers. Find everything you need below.</p>
+            </div>
+            <div class="page-hero-deco"><i class="fas fa-question-circle"></i></div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content">
+        <div class="container">
+            <!-- Search -->
+            <div class="faq-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="faqSearch" placeholder="Search for a question...">
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="faq-categories">
+                <button class="faq-cat-btn active" data-category="all">All</button>
+                <button class="faq-cat-btn" data-category="general">General</button>
+                <button class="faq-cat-btn" data-category="services">Services</button>
+                <button class="faq-cat-btn" data-category="booking">Booking</button>
+                <button class="faq-cat-btn" data-category="pricing">Pricing</button>
+                <button class="faq-cat-btn" data-category="aftercare">Aftercare</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-list">
+                <!-- General -->
+                <div class="faq-item" data-category="general">
+                    <button class="faq-question">
+                        <span>What is Nyvex?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nyvex is a premium mobile auto detailing service. We come to your location — home, office, or anywhere convenient — and provide professional car care including ceramic coating, paint correction, interior detailing, and foam wash.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <button class="faq-question">
+                        <span>Where do you operate?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We currently serve the entire city and surrounding areas within a 30km radius. If you're unsure whether we cover your location, just enter your address during booking and we'll confirm availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <button class="faq-question">
+                        <span>Do I need to be present during the service?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not necessarily. As long as we have access to the vehicle and a water/electricity source (if needed), you can go about your day. We'll notify you once the service is complete.</p>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="faq-item" data-category="services">
+                    <button class="faq-question">
+                        <span>What is ceramic coating and how long does it last?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ceramic coating is a liquid polymer applied to your car's exterior that creates a protective layer. It repels water, resists UV damage, and keeps your car looking glossy. Depending on the grade, it can last anywhere from 1 to 5 years with proper maintenance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <button class="faq-question">
+                        <span>What's included in interior detailing?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our interior detailing includes deep vacuuming, dashboard and console cleaning, leather/fabric conditioning, door panel cleaning, air vent dusting, glass cleaning from inside, and odor elimination. We treat every surface to leave your cabin fresh and spotless.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <button class="faq-question">
+                        <span>What is paint correction?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Paint correction is the process of removing surface imperfections like swirl marks, light scratches, oxidation, and water spots using machine polishing. It restores your paint to a mirror-like finish and is often done before applying ceramic coating.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services">
+                    <button class="faq-question">
+                        <span>Do you offer engine bay cleaning?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Engine bay cleaning is available as an add-on service. We carefully degrease and clean the engine compartment, dress rubber and plastic components, and leave it looking showroom-fresh.</p>
+                    </div>
+                </div>
+
+                <!-- Booking -->
+                <div class="faq-item" data-category="booking">
+                    <button class="faq-question">
+                        <span>How do I book a service?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can book through our website, call us directly, or message us on WhatsApp. Simply choose your service, pick a date and time, provide your location, and we'll confirm your appointment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="booking">
+                    <button class="faq-question">
+                        <span>Can I reschedule or cancel my booking?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. You can reschedule free of charge up to 12 hours before your appointment. Cancellations made 24+ hours in advance receive a full refund. Please refer to our <a href="terms.html">Terms & Conditions</a> for the full cancellation policy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="booking">
+                    <button class="faq-question">
+                        <span>How long does each service take?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Service duration varies: Foam Wash takes about 1-2 hours, Interior Detailing 2-3 hours, Paint Correction 4-6 hours, and Ceramic Coating 6-8 hours (including curing time). We'll give you an estimated time during booking.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <div class="faq-item" data-category="pricing">
+                    <button class="faq-question">
+                        <span>How much do your services cost?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pricing depends on the service and vehicle size. We offer transparent pricing with no hidden fees. You can view our price list on the Services page or get an instant quote during booking. Packages start from ₹999 for a basic foam wash.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing">
+                    <button class="faq-question">
+                        <span>Do you charge extra for SUVs or larger vehicles?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, pricing is based on vehicle size. Sedans, hatchbacks, SUVs, and luxury vehicles each have different rates due to the surface area and time required. The exact price is shown during booking based on your vehicle type.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept UPI (GPay, PhonePe, Paytm), credit/debit cards, net banking, and cash. Payment is collected after service completion unless you opt for prepaid booking.</p>
+                    </div>
+                </div>
+
+                <!-- Aftercare -->
+                <div class="faq-item" data-category="aftercare">
+                    <button class="faq-question">
+                        <span>How do I maintain my ceramic coating?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Avoid washing your car for 7 days after application. After that, use pH-neutral car shampoo, avoid automatic car washes, and do a maintenance wash every 2 weeks. We also offer maintenance packages to keep your coating in top condition.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="aftercare">
+                    <button class="faq-question">
+                        <span>Do you offer any warranty on your services?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our ceramic coating comes with a warranty ranging from 1-5 years depending on the package. Paint correction and detailing services include a 7-day satisfaction guarantee — if you're not happy, we'll redo it free of charge.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="aftercare">
+                    <button class="faq-question">
+                        <span>What if I'm not satisfied with the service?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your satisfaction is our priority. If you're not happy with the results, contact us within 7 days and we'll schedule a free redo. We stand behind our work 100%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions -->
+            <div class="faq-cta">
+                <div class="faq-cta-icon"><i class="fas fa-headset"></i></div>
+                <h3>Still have questions?</h3>
+                <p>Can't find what you're looking for? Our team is happy to help.</p>
+                <div class="faq-cta-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                    <a href="mailto:info@nyvex.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-name">Nyvex</span>
+                            
+                        </div>
+                    </div>
+                    <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#wash">Foam Wash</a></li>
+                        <li><a href="services.html#engine">Engine Cleaning</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Main Street, City, State</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nyvex.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon - Sat: 8:00 AM - 7:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
